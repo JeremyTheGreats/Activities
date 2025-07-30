@@ -14,8 +14,7 @@ public class Activity1 {
         String remarks;
         
         System.out.print("Enter student name : ");
-        String name = s.nextLine();
-        
+        String name = s.nextLine(); 
         System.out.print("Enter number of subject : ");
         int num = s.nextInt();
         

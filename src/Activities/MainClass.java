@@ -2,15 +2,15 @@
 package Activities;
 
 import java.util.Scanner;
-import Verify.bankapp;
+import Bankapp.bankapp;
 
-public class BankingApplication {
+public class MainClass {
     
     public static void main(String[] args) {
         
         Scanner in = new Scanner(System.in);
         bankapp bank = new bankapp();
-        int attemp = 0;
+        int attemp = 3;
         
         System.out.println("WELCOME TO MY SYSTEM! ");
         System.out.println("What do you fell like doing today?");
@@ -23,7 +23,7 @@ public class BankingApplication {
         
             switch( choice ){
                 case 1:
-                    while( attemp != 3 ){
+                    while( attemp != 0 ){
                         
                         System.out.print("Enter Account No : ");
                         int acc = in.nextInt();
@@ -36,11 +36,12 @@ public class BankingApplication {
                                 System.exit(0);
                             }
                             else{
-                                System.out.println("Invalid Account No or Pin!");
-                                attemp++;
+                                attemp--;
+                                System.out.println("Invalid Account No or Pin! Left attemp " + attemp);
+                                
                             }
                             
-                            if ( attemp == 3 ){
+                            if ( attemp == 0 ){
                                 System.out.println("Try Again later!");
                             }
                     }

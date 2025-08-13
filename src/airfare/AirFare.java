@@ -10,6 +10,7 @@ public class AirFare {
         
         Scanner input = new Scanner(System.in);
         float result = 0;
+        float discount;
         
         System.out.print("Distance ( km ) : ");
         int distance = input.nextInt();
@@ -22,7 +23,8 @@ public class AirFare {
                 result = 250 * distance;
                     
                     if( distance >= 1000 ){
-                        result = result * ( float ) 0.1;
+                        discount = result * ( float ) 0.1;
+                        result = result - discount;
                     }
                 System.out.printf("Total fare : %.2f\n", result );
 
@@ -32,8 +34,9 @@ public class AirFare {
                 result = 500 * distance;
                     
                     if( distance >= 1000 ){
-                            result = result * ( float ) 0.1;
-                        }
+                        discount = result * ( float ) 0.1;
+                        result = result - discount;
+                    }
                 System.out.printf("Total fare : %.2f\n", result );
             }
             else{
